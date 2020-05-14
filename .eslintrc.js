@@ -1,4 +1,5 @@
 module.exports = {
+  parser: 'babel-eslint',
   extends: 'eslint:recommended',
   rules: {
     'no-console': 'off', // 允许 console
@@ -15,6 +16,7 @@ module.exports = {
     'no-case-declarations': 'off', // 允许在 case 子句中使用词法声明
     'no-else-return': 'off', // 允许 if 语句中 return 语句之后有 else 块
     'no-self-assign': 'off', // 允许自我赋值
+    'no-unused-vars': 'off', // 忽略声明但并未使用的变量
 
     'default-case': 'warn', // 【建议】要求 switch 语句中有 default 分支
     'no-caller': 'error', // 禁用 arguments.caller 或 arguments.callee
@@ -43,13 +45,6 @@ module.exports = {
 
     indent: ['error', 2], // 强制缩进两个空格
     quotes: ['error', 'single'], // 强制只允许单引号字符串
-    'no-unused-vars': [
-      1,
-      {
-        vars: 'local',
-        args: 'none',
-      },
-    ],
   },
   env: {
     node: true,

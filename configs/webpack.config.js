@@ -51,6 +51,7 @@ const config = {
             options: {
               fix: true,
               formatter: require('eslint-friendly-formatter'),
+              emitWarning: false,
             },
           },
         ],
