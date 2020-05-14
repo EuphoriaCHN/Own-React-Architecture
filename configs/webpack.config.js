@@ -117,6 +117,7 @@ const config = {
     alias: {
       '@components': path.resolve(SOURCE_PATH, 'components'),
       '@container': path.resolve(SOURCE_PATH, 'container'),
+      '@store': path.resolve(SOURCE_PATH, 'store'),
     },
   },
   externals: {
