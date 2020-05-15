@@ -115,8 +115,11 @@ const config = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     modules: [SOURCE_PATH, NODE_MODULES],
     alias: {
+      '@': SOURCE_PATH,
       '@components': path.resolve(SOURCE_PATH, 'components'),
       '@container': path.resolve(SOURCE_PATH, 'container'),
+      '@constants': path.resolve(SOURCE_PATH, 'common', 'constants'),
+      '@utils': path.resolve(SOURCE_PATH, 'common', 'utils'),
       '@store': path.resolve(SOURCE_PATH, 'store'),
     },
   },

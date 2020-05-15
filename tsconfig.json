@@ -14,14 +14,23 @@
     "rootDir": "./",
     "baseUrl": "./src",
     "paths": {
+      "@": [
+        ""
+      ],
       "@components/*": [
-        "components/*"
+        "./src/components/*"
+      ],
+      "@container": [
+        "./src/container/*"
       ],
       "@constants/*": [
-        "common/constants/*"
+        "./src/common/constants/*"
       ],
       "@utils/*": [
-        "common/utils/*"
+        "./src/common/utils/*"
+      ],
+      "@store": [
+        "./src/store/*"
       ]
     },
     "forceConsistentCasingInFileNames": true,
@@ -34,6 +43,13 @@
     "noUnusedLocals": true,
     "esModuleInterop": true
   },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "configs"
+  ],
   "typeRoots": [
     "node",
     "node_modules/@types",
