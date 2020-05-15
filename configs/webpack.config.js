@@ -72,7 +72,6 @@ const config = {
       },
       {
         test: /\.css$/,
-        exclude: NODE_MODULES,
         use: isDev ?
           ['style-loader', 'happypack/loader?id=happy-css'] :
           ['style-loader', MiniCssExtractPlugin.loader, 'happypack/loader?id=happy-css'],
@@ -185,14 +184,17 @@ const config = {
     createHappyPlugin('happy-css', [
       {
         loader: 'css-loader',
+        exclude: [/node_modules/],
         query: {
           url: false,
           sourceMap: true,
           importLoaders: 1,
+          modules: false,
         },
       },
       {
         loader: 'postcss-loader',
+        exclude: [/node_modules/],
         query: {
           config: {
             path: path.join(__dirname, './postcss.config.js'),

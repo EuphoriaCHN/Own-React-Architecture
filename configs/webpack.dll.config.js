@@ -29,7 +29,7 @@ const config = {
   entry: {
     react: ['react', 'react-dom', 'react-router-dom', 'react-router', 'prop-types'],
     // common: ['axios', 'classnames', "moment", 'core-js/es6/promise', 'core-js/es6/map', 'core-js/es6/set'],
-    common: ['axios', 'classnames', 'moment'],
+    common: ['axios', 'classnames', 'moment', 'antd'],
   },
   output: {
     path: OUTPUT_PATH,
