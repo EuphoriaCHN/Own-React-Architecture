@@ -134,7 +134,7 @@ const config = {
     new ProgressBarPlugin({
       format: `${chalk.blue.bold('Build')}  ${chalk.cyan('[:bar]')}  ${chalk.green.bold(':percent')} (${chalk.magenta(
         ':elapsed'
-      )} seconds), ${chalk.greenBright('Euphoria Happy Every Day~')}`,
+      )} seconds), ${chalk.greenBright('Euphoria Happy Every Day ✨')}`,
       clear: false,
       complete: '*',
       incomplete: '.',
