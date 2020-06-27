@@ -36,7 +36,7 @@ const developmentConfig = webpackMerge(baseWebpackConfig, {
   },
   output: {
     path: OUTPUT_PATH,
-    publicPath: '',
+    publicPath: '/',
     filename: '[name].js',
     chunkFilename: '[name].[chunkhash:8].js',
   },
