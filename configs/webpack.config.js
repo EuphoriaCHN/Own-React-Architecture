@@ -108,6 +108,11 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.json$/i,
+        type: 'javascript/auto',
+        use: 'happypack/loader?id=happy-json',
+      },
     ],
     noParse: /node_modules\/(jquey|js\\-cookie\.js)/,
   },
@@ -227,6 +232,13 @@ const config = {
         query: {
           sourceMap: true,
         },
+      },
+    ]),
+
+    // JSON
+    createHappyPlugin('happy-json', [
+      {
+        loader: 'json-loader',
       },
     ]),
   ],
