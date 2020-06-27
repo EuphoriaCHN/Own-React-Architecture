@@ -89,9 +89,10 @@ const config = {
           {
             loader: 'url-loader',
             options: {
+              esModule: false,
               limit: 8192,
-              name: 'images/[name].[hash:8].[ext]',
-            },
+              name: 'images/[name].[hash:8].[ext]'
+            }
           },
         ],
       },

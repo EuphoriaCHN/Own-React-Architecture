@@ -1,8 +1,19 @@
 import * as React from 'react';
-import { observer } from 'mobx-react';
+import logo from './euphoria.jpg';
 
-interface IProps {}
+import './App.scss';
 
-const App: React.FC = observer((props: IProps) => <h1>Hello, Euphoria</h1>);
+interface IProps { }
+
+const App: React.FC<IProps> = props => {
+  const render = React.useMemo(() => (
+    <div className={'main'}>
+      <img className={'logo'} src={logo} />
+      <h2>Euphoria Happy Every Day ✨</h2>
+    </div>
+  ), []);
+
+  return render;
+};
 
 export default App;

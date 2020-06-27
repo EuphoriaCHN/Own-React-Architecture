@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /**
  * Webpack 配置文件 _development
  *
@@ -61,7 +60,7 @@ const developmentConfig = webpackMerge(baseWebpackConfig, {
   ],
   devServer: {
     contentBase: path.join(OUTPUT_PATH, 'asserts'),
-    port: 4001, // TODO:: 记得改回 4000
+    port: 4000,
     compress: true,
     open: true,
     openPage: '',
