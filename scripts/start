@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const { fork } = require('child_process');
+
+const { getWebpackDevTerminalStyle, logger } = require('../configs/lib/utils');
+
+let childProcess = null;
+if (getWebpackDevTerminalStyle() === 'dashboard') {
+  childProcess = fork('',
+    ['./node_modules/.bin/webpack-dashboard', '--', './node_modules/.bin/webpack-dev-server', '--config', './configs/webpack.dev.js']
+  );
+} else {
+  childProcess = fork('./node_modules/.bin/cross-env',
+    ['NODE_ENV=development', './node_modules/.bin/webpack-dev-server', '--config', './configs/webpack.dev.js']
+  );
+}
+
+logger(`Child process id is ${childProcess.pid}`);
+childProcess.on('message', childProcess.send);
+childProcess.on('error', childProcess.send);
+process.on('message', console.log);

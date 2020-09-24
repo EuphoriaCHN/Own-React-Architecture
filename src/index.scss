@@ -1,0 +1,29 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7fcf7;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    border-radius: 50%;
+    animation: logoRotate 15s linear infinite;
+    margin-bottom: 32px;
+  }
+}
+
+@keyframes logoRotate {
+  form {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
