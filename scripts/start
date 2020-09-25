@@ -6,8 +6,8 @@ const { getWebpackDevTerminalStyle, logger } = require('../configs/lib/utils');
 
 let childProcess = null;
 if (getWebpackDevTerminalStyle() === 'dashboard') {
-  childProcess = fork('',
-    ['./node_modules/.bin/webpack-dashboard', '--', './node_modules/.bin/webpack-dev-server', '--config', './configs/webpack.dev.js']
+  childProcess = fork('./node_modules/.bin/webpack-dashboard',
+    ['--', './node_modules/.bin/webpack-dev-server', '--config', './configs/webpack.dev.js']
   );
 } else {
   childProcess = fork('./node_modules/.bin/cross-env',
