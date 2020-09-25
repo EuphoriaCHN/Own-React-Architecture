@@ -80,9 +80,6 @@ const getStyleModulesLoader = (type, happypack = false) => {
   const cssLoaders = ['css-loader', {
     loader: 'postcss-loader',
     options: {
-      postcssOptions: {
-        plugins: [autoprefixer]
-      },
       sourceMap: isDevelopment()
     }
   }];
