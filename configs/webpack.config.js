@@ -155,7 +155,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[hash:8].[ext]',
-              outputPath: '/static/common',
+              outputPath: 'static/common',
             },
           },
         ],
@@ -168,7 +168,7 @@ module.exports = {
             esModule: false,
             limit: 8 * 1024,
             name: '[name].[hash:8].[ext]',
-            outputPath: '/static/images',
+            outputPath: 'static/images',
           },
         },
       },
