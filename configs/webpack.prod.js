@@ -18,6 +18,10 @@ if (Configs.bundleAnalyzer) {
 
 module.exports = WebpackMerge(webpackBaseConfig, {
   mode: 'production',
+  output: {
+    filename: 'bundle.[hash:8].js',
+    path: ModulesPath.DIST
+  },
   optimization: {
     minimizer: [
       new OptimizeCssAssetsWebpackPlugin(),

@@ -49,6 +49,10 @@ switch (webpackDevTerminalStyle) {
 
 module.exports = WebpackMerge(webpackBaseConfig, {
   mode: 'development',
+  output: {
+    filename: 'bundle.[hash:8].js',
+    path: ModulesPath.DIST
+  },
   devServer: {
     port: Configs.devConfig.port,
     quiet: webpackDevTerminalStyle !== 'default',

@@ -102,10 +102,6 @@ const getStyleModulesLoader = (type, happypack = false) => {
 
 module.exports = {
   entry: path.join(ModulesPath.SRC, 'index.js'),
-  output: {
-    filename: 'bundle.[hash:8].js',
-    path: ModulesPath.DIST
-  },
   resolve: {
     modules: [
       path.resolve(ModulesPath.ROOT, 'node_modules'),
