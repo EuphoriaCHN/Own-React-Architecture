@@ -13,7 +13,20 @@
     "experimentalDecorators": true,
     "rootDir": "./",
     "baseUrl": "./src",
-    "paths": {},
+    "paths": {
+      "@/*": [
+        "/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+      "@containers/*": [
+        "containers/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ]
+    },
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": false,

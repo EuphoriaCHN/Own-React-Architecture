@@ -60,6 +60,10 @@ const Configs = {
     // do not forget to add configurate in tsconfig.json
     //? You also can use ModulePath instead of path.resolve
     //? Like: '@': ModulePath.SRC
+    '@': ModulePath.SRC,
+    '@common': path.resolve(ModulesPath.SRC, 'common'),
+    '@components': path.resolve(ModulesPath.SRC, 'components'),
+    '@containers': path.resolve(ModulesPath.SRC, 'containers'),
   }
 };
 
