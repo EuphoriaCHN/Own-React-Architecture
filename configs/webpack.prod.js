@@ -20,6 +20,7 @@ module.exports = WebpackMerge(webpackBaseConfig, {
   mode: 'production',
   output: {
     filename: 'bundle.[hash:8].js',
+    publicPath: '/dist/',
     path: ModulesPath.DIST
   },
   optimization: {
