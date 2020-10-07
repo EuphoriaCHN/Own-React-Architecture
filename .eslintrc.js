@@ -10,7 +10,7 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  parser: 'babel-eslint',
+  parser: 'typescript-eslint',
   extends: [
     'eslint:recommended',
     'plugin:react/recommended'
@@ -27,7 +27,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    'typescript'
   ],
   globals: {
     '__DEV__': false,
@@ -68,7 +69,7 @@ module.exports = {
     // 禁止不必要的布尔转换
     'no-extra-boolean-cast': 2,
     // 禁止不必要的括号 //(a * b) + c;//报错
-    'no-extra-parens': 0,
+    'no-extra-parens': 1,
 
     // 强制所有控制语句使用一致的括号风格
     'curly': [2, 'all'],
@@ -266,7 +267,7 @@ module.exports = {
     // 要求箭头函数体使用大括号
     'arrow-body-style': 2,
     // 要求箭头函数的参数使用圆括号
-    'arrow-parens': 2,
+    'arrow-parens': 0,
     'arrow-spacing': [2, {
       'before': true,
       'after': true
@@ -317,7 +318,6 @@ module.exports = {
     // 强制在 yield* 表达式中 * 周围使用空格
     'yield-star-spacing': 2,
 
-
     // 强制使用一致的换行风格
     'linebreak-style': [2, 'unix'],
     // 在JSX中强制布尔属性符号
@@ -352,7 +352,7 @@ module.exports = {
     // 防止在componentDidUpdate中使用setState
     'react/no-did-update-set-state': 2,
     // 防止使用未知的DOM属性
-    'react/no-unknown-property': 2,
+    'react/no-unknown-property': 1,
     // 为React组件强制执行ES5或ES6类
     'react/prefer-es6-class': 2,
     // 防止在React组件定义中丢失props验证
@@ -366,7 +366,7 @@ module.exports = {
     // 防止在数组中遍历中使用数组key做索引
     // "react/no-array-index-key": 0,
     // 不使用弃用的方法
-    'react/no-deprecated': 2,
+    'react/no-deprecated': 1,
     // 在JSX属性中强制或禁止等号周围的空格
     'react/jsx-equals-spacing': 2,
     'react/jsx-filename-extension': [2, {
