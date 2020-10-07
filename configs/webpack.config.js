@@ -175,10 +175,6 @@ module.exports = {
       {
         test: /\.html/,
         use: 'html-withimg-loader',
-      },
-      {
-        test: /\.json$/,
-        use: 'json-loader'
       }
     ]
   },
