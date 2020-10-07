@@ -35,6 +35,8 @@ Project support `process.env.NODE_ENV`, like `production` and `development`, you
 
 # Development Dependencies
 
+- Typescript
+  - typescript
 - Webpack
   - webpack, webpack-cli, webpack-merge
 - Dev Tools:
@@ -51,6 +53,7 @@ Project support `process.env.NODE_ENV`, like `production` and `development`, you
   - @babel/plugin-transform-runtime
 - ES lint:
   - eslint, eslint-loader, eslint-friendly-formatter, babel-eslint, eslint-plugin-react, eslint-plugin-import
+  - @typescript-eslint/parser
 - Static sources:
   - file-loader, url-loader, html-withimg-loader, json-loader
 - Utils: 
@@ -61,3 +64,7 @@ Project support `process.env.NODE_ENV`, like `production` and `development`, you
   - happypack (Because that the `mini-css-extract-plugin` can not be used with `happypack`, so we dont use it on **any** style modules)
 - Other:
   - chalk, webpack-dashboard, progress-bar-webpack-plugin, react-hot-loader, log-symbols, log4js
+
+# Extends
+
+- react-router, react-router-dom
