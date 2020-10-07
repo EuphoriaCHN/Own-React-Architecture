@@ -59,8 +59,8 @@ const Configs = {
     // you can add some alias to project import
     // do not forget to add configurate in tsconfig.json
     //? You also can use ModulePath instead of path.resolve
-    //? Like: '@': ModulePath.SRC
-    '@': ModulePath.SRC,
+    //? Like: '@': ModulesPath.SRC
+    '@': ModulesPath.SRC,
     '@common': path.resolve(ModulesPath.SRC, 'common'),
     '@components': path.resolve(ModulesPath.SRC, 'components'),
     '@containers': path.resolve(ModulesPath.SRC, 'containers'),
