@@ -55,7 +55,7 @@ Project support `process.env.NODE_ENV`, like `production` and `development`, you
   - eslint, eslint-loader, eslint-friendly-formatter, babel-eslint, eslint-plugin-react, eslint-plugin-import
   - @typescript-eslint/parser
 - Static sources:
-  - file-loader, url-loader, html-withimg-loader, json-loader
+  - file-loader, url-loader, html-withimg-loader
 - Utils: 
   - clean-webpack-plugin, copy-webpack-plugin, banner-plugin
 - DLL: 
