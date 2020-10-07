@@ -51,6 +51,7 @@ module.exports = WebpackMerge(webpackBaseConfig, {
   mode: 'development',
   output: {
     filename: 'bundle.[hash:8].js',
+    publicPath: '/',
     path: ModulesPath.DIST
   },
   devServer: {
