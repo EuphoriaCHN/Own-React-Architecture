@@ -10,10 +10,11 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  parser: 'typescript-eslint',
+  parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   parserOptions: {
     ecmaVersion: 7,
@@ -28,7 +29,7 @@ module.exports = {
   },
   plugins: [
     'react',
-    'typescript'
+    '@typescript-eslint'
   ],
   globals: {
     '__DEV__': false,
@@ -374,5 +375,13 @@ module.exports = {
     }],
     // 禁止未使用的变量
     'no-unused-vars': 0,
+
+    // TS 相关
+    // 允许使用 any
+    '@typescript-eslint/no-explicit-any': 0,
+    // 允许出现不曾被使用过的变量
+    '@typescript-eslint/no-unused-vars': 0,
+    // 允许使用禁用类型，比如 {}
+    '@typescript-eslint/ban-types': 0
   }
 };

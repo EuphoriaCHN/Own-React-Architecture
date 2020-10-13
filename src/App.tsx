@@ -11,7 +11,7 @@ const App: React.FC<{}> = (props) => {
       <img src={avatar} alt={'LOGO'} className={'logo'} />
       <h2>Euphoria Happy Every Day ✨</h2>
     </div>
-    , []);
+  , []);
 
   return render;
 };
