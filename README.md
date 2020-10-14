@@ -67,4 +67,8 @@ Project support `process.env.NODE_ENV`, like `production` and `development`, you
 
 # Extends
 
+## Router
 - react-router, react-router-dom
+
+## I18n
+- i18next, i18next-scanner, i18next-browser-languagedetector, js-cookie, react-i18next, google-translate-api
