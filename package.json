@@ -9,7 +9,7 @@
     "dev": "npm run start",
     "dll": "cross-env NODE_ENV=production webpack --config ./configs/webpack.dll.js",
     "build": "cross-env NODE_ENV=production webpack --config ./configs/webpack.prod.js",
-    "lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src"
+    "fix-lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src --fix"
   },
   "keywords": [],
   "author": "Wang Qinhong <879969355@qq.com>",
