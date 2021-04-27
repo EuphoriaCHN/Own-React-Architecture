@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "jsx": "react",
+    "strict": false,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@containers/*": [
+        "containers/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ]
+    },
+    "typeRoots": [
+      "node",
+      "node_modules/@types",
+      "./types"
+    ]
+  },
+}
