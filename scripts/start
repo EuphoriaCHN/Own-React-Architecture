@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!D:\PATH\NodeJS node
 
 process.env.NODE_ENV = 'development';
 
@@ -8,22 +8,21 @@ const path = require('path');
 const { paths: appPath } = require('../config/utils');
 
 const root = (...paths) => path.resolve(appPath.root, ...paths);
-const bin = (...paths) => path.resolve(appPath.root, 'node_modules', '.bin', ...paths);
 
 async function run() {
   await del(appPath.dll);
   await del(`${appPath.caches}/*.json`);
 
-  const dllProcess = fork(`${bin('webpack')}`, [
+  const dllProcess = fork(appPath.webpackScript, [
     '--config',
-    `${root('config', 'webpack.dll.js')}`
+    root('config', 'webpack.dll.js')
   ]);
 
-  dllProcess.on('exit', function () {
-    const serveProcess = fork(`${bin('webpack')}`, [
+  dllProcess.on('exit', function() {
+    const serveProcess = fork(appPath.webpackScript, [
       'serve',
       '--config',
-      `${root('config', 'webpack.dev.js')}`
+      root('config', 'webpack.dev.js')
     ]);
   });
 }

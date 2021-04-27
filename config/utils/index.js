@@ -29,6 +29,7 @@ const paths = {
   dllFile: isDev() ? root('node_modules/.eup_dll/index.js') : root('build/dll/index.js'),
   dllManifest: isDev() ? root('node_modules/.eup_dll/manifest.json') : root('build/dll/manifest.json'),
   dllVersionManifest: isDev() ? root('node_modules/.eup_dll/version.json') : root('build/dll/version.json'),
+  webpackScript: root('node_modules/webpack/bin/webpack.js')
 };
 
 module.exports = {
